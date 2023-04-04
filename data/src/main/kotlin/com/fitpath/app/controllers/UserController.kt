@@ -24,4 +24,6 @@ class UserController (private val userService: UserService){
         val userDTO = userService.getUserByEmail(email) ?: return ResponseEntity.notFound().build()
         return ResponseEntity.ok(userDTO)
     }
+
+
 }

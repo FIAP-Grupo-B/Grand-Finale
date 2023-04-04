@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service
 class UserService(private val userRepository: UserRepository) {
     fun createUser(userDTO: UserDTO): UserEntity {
         val user = UserEntity(
+                                email = userDTO.email,
+                                password = userDTO.password,
                                 firstName = userDTO.firstName,
                                 lastName = userDTO.lastName,
-                                email = userDTO.email,
+                                middleName= userDTO.middleName,
                                 avatarUrl = userDTO.avatarUrl
                                 )
         return userRepository.save(user)
@@ -19,7 +21,7 @@ class UserService(private val userRepository: UserRepository) {
 
     fun getAllUsers(): List<UserDTO> {
         val listUsers = userRepository.findAll()
-        return listUsers.map { user -> UserDTO(user.id, user.firstName, user.lastName, user.email, user.avatarUrl) }
+        return listUsers.map { user -> UserDTO(user.id!!, user.email,user.firstName, user.lastName, user.middleName, user.avatarUrl) }
     }
 
 /*
@@ -29,13 +31,11 @@ class UserService(private val userRepository: UserRepository) {
         lastName = lastName,
         email = email,
         avatarUrl = avatarUrl
-
     )
-
  */
     fun getUserByEmail(email: String): UserDTO? {
         val user = userRepository.findUserByEmail(email) ?: return null
-        return UserDTO(user.id!!, user.firstName, user.lastName, user.email, user.avatarUrl)
+        return UserDTO(user.id,user.email, user.password, user.firstName, user.lastName, user.middleName, user.avatarUrl)
     }
 
 }

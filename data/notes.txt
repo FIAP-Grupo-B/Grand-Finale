@@ -1,0 +1,6 @@
+
+1 - UUID (Universally Unique Identifier) é um identificador de 128 bits que é garantido como único em todo mundo, sem depender de registro centralizado para sua geração. O UUID é frequentemente utilizado em sistemas distribuídos para identificar de forma única informações em um ambiente sem a necessidade de coordenação central. É comum ver UUIDs e aplicações que envolvem identificação de objetos, como sistemas de banco de dados ou aplicações de autentificação. O formato padrão é cmposto por 32 caracteres hexadecimais, separados por hifens.
+
+2 - O CONSTRUTOR ".randomUUID()" DA CLASSE UUID instancia o objeto sem definir o valor;
+
+3 - O operador kotlin "!!" (not-null assertion operator) é utilizado para indicar ao compilador que uma variavel ou expressão nunca pode ser null em um determinado contexto;
