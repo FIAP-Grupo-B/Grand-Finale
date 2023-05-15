@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="weight_goal_had_many_day_progress" directorySegmentName="seg_0" id="4E90F166-228E-4A5F-6A22-B2F3F5F374BF">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:53:59 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<sourcePk>89B3698E-1A5B-D228-6E58-EDB66550EC99</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D1307239-591B-EED9-2CA6-FDC045A80AA9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F05FF510-E1B6-6E91-6D1E-42A17F952F42</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

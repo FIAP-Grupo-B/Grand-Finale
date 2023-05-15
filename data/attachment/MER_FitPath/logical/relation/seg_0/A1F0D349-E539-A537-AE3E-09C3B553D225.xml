@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hydration_goal_had_many_day_progress" directorySegmentName="seg_0" id="A1F0D349-E539-A537-AE3E-09C3B553D225">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:05:31 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<sourcePk>4118647C-D1BC-960E-ED6F-EBD79EE352F0</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>88C63FB4-6DCD-CC7B-A10A-0E258DE2F5C0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>29387ACA-FA5B-82C1-1D5D-B78F2DCF2FB5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

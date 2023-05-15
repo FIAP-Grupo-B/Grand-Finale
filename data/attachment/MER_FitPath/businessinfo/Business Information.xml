@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="83A4BCF8-0ED7-296F-E194-8214BEB7FC5F">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:23:38 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

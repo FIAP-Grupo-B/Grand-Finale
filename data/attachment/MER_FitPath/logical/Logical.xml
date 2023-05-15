@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9013254F-C9CC-37A5-F90C-7B3C006839CD" mainViewID="6E73AB61-2E60-F400-20B4-000B5FD72690">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:23:38 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

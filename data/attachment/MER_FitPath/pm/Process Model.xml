@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="926203E6-73E5-9C60-9F11-60731DE22C66">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:23:38 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="88C63FB4-6DCD-CC7B-A10A-0E258DE2F5C0" name="tb_ftp_hydration_goal">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:58:10 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>hydration_goal</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="9B7C8A3E-4C30-11A5-9296-F6DC2A88E951">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:58:43 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_id" id="079DB0E3-592C-5DB9-22F5-FE23DE9D7B8C">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:01:37 UTC</createdTime>
+<generatorID>00C584D1-D207-318B-84F0-C3CC4426C162</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<referedAttribute>638A3EB2-5B06-30CC-1084-0D1066E64600</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>16</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="goal_value" id="3641E076-D9AD-4674-2A88-70D02583507C">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:59:00 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,2,1</ownDataTypeParameters>
+</Attribute>
+<Attribute name="notification_time" id="281AFE25-1601-130C-B950-09D8952464F2">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:04:38 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4118647C-D1BC-960E-ED6F-EBD79EE352F0" name="tb_ftp_hydration_goal PK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 22:58:56 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<engineerTo>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9B7C8A3E-4C30-11A5-9296-F6DC2A88E951</attributeRef>
+<attributeRef>079DB0E3-592C-5DB9-22F5-FE23DE9D7B8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
