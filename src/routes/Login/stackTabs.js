@@ -4,10 +4,9 @@ import { NavigationContainer } from '@react-navigation/native'
 
 import Login from 'pages/Login'
 import Cadastrar from 'pages/Cadastrar'
-import BottomTabs from './bottomTabs'
+import BottomTabs from '../Home/bottomTabs'
 
 import AuthContext from 'context/auth'
-
 
 const Stack = createStackNavigator()
 

@@ -30,9 +30,7 @@ const fonts = {
   SimpleLineIcons
 }
  
-export default function Icons({ 
-  // position = 'inherit',
- font, name, size, color }) {
+export default function Icons({ font, name, size, color }) {
   const Icon = fonts[font]
   return (
     <Icon {...{name, size, color}} /> 

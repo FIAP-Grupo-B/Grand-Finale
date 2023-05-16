@@ -2,7 +2,7 @@ import Icons from 'components/Icons'
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { Text } from 'react-native'
-import TopTabs from 'routes/topTabs'
+import TopTabs from 'routes/Home/topTabs'
 
 export default function NavBar({children}) {
   return (

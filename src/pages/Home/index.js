@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from 'components/NavBar';
 import { ScrollView, SafeAreaView, View, Text, Image, StatusBar } from 'react-native';
-import TopTabs from 'routes/topTabs';
+import TopTabs from 'routes/Home/topTabs';
 
 
 

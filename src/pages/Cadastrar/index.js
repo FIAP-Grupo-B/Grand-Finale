@@ -1,6 +1,5 @@
-import { View, Text, FlatList, Dimensions, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Dimensions, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { useState, useRef } from 'react'
-import Select from 'components/Form/Select'
 import Input from 'components/Form/Input'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
 import useUsers from 'hooks/useUsers';
@@ -8,10 +7,28 @@ import { useNavigation } from '@react-navigation/native';
 
 const form = [
     {
+      name: 'email',
+      type: Input,
+      text: 'Digite o email:',
+      placeholder: 'Email',
+    },
+    {
+      name: 'password',
+      type: Input,
+      text: 'Digite sua senha:',
+      placeholder: 'Senha',
+    },
+    {
       name: 'firstName',
       type: Input,
-      text: 'Digite o primeiro nome:',
+      text: 'Digita o primeiro nome:',
       placeholder: 'Primeiro nome',
+    },
+    {
+      name: 'middleName',
+      type: Input,
+      text: 'Digita o nome do meio:',
+      placeholder: 'Nome do meio',
     },
     {
       name: 'lastName',
@@ -19,20 +36,16 @@ const form = [
       text: 'Digita o último nome:',
       placeholder: 'Último nome',
     },
-    {
-      name: 'email',
-      type: Input,
-      text: 'Digite o email:',
-      placeholder: 'Email',
-    },
   ]
 
-  const { width, heigth} = Dimensions.get('window')
+  const { width } = Dimensions.get('window')
 export default function Cadastrar() {
   const [formValue, setFormValue] = useState({
     firsName: "",
     lastName: "",
+    middleName: "",
     email: "",
+    password: "",
     avatarUrl: "http://localhost:8081/assets/exemplo.jpg",
   })
   const handleSlide = (index) => {

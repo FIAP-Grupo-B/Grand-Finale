@@ -4,14 +4,15 @@ import Input from 'components/Form/Input'
 import useUsers from 'hooks/useUsers'
 import { useNavigation } from '@react-navigation/native'
 import AuthContext from 'context/auth'
+import Icons from 'components/Icons'
 
 
 export default function Login() {
-  const { signed, user, Login } = useContext(AuthContext)
+  const { Login } = useContext(AuthContext)
   const navigation = useNavigation()
   const [error, setError] = useState('')
   const [login, setLogin] = useState({
-    email: ''
+    email: '',
   })
   const credentials = {
     name: 'email',
