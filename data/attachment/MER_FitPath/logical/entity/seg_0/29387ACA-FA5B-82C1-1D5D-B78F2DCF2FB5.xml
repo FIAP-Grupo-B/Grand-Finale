@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="29387ACA-FA5B-82C1-1D5D-B78F2DCF2FB5" name="tb_ftp_hydration_goal_progress">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="29387ACA-FA5B-82C1-1D5D-B78F2DCF2FB5" name="tb fpt hydration goal progress">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 23:03:06 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
@@ -16,7 +16,7 @@
 <normalForm>Third</normalForm>
 <shortName>hydration_goal_progress</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="user_id" id="932335B3-D8FB-38F0-8C70-850C40E22A06">
+<Attribute name="user id" id="932335B3-D8FB-38F0-8C70-850C40E22A06">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 23:05:31 UTC</createdTime>
 <generatorID>A1F0D349-E539-A537-AE3E-09C3B553D225</generatorID>
@@ -31,7 +31,7 @@
 <dataTypePrecision>16</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="goal_id" id="E617A6F7-6144-D837-DE56-6AC472C4610F">
+<Attribute name="goal id" id="E617A6F7-6144-D837-DE56-6AC472C4610F">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 23:05:31 UTC</createdTime>
 <generatorID>A1F0D349-E539-A537-AE3E-09C3B553D225</generatorID>
@@ -74,12 +74,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="AD033CB4-18FA-F191-7100-31AABC7D668A" name="tb_ftp_hydration_goal_progress PK">
+<identifier id="AD033CB4-18FA-F191-7100-31AABC7D668A" name="tb_ftp_hydration_goal_progress_PK">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 23:03:40 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

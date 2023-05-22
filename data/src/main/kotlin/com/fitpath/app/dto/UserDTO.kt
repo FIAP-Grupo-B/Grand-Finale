@@ -6,23 +6,20 @@ class UserDTO(
     val id: UUID? = null,
     val email: String,
     val password: String,
-    val firstName: String,
+    val name: String,
     val lastName: String,
-    val middleName: String?,
     val avatarUrl: String?
 ){
     constructor(id: UUID,
                 email: String,
-                firstName: String,
+                name: String,
                 lastName: String,
-                middleName: String?,
                 avatarUrl: String?) : this(
                                             id!!,
                                             email,
                                             "",
-                                            firstName,
+                                            name,
                                             lastName,
-                                            middleName,
                                             avatarUrl){
 
     }

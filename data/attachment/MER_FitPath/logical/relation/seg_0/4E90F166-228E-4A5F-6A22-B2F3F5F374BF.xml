@@ -1,11 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="weight_goal_had_many_day_progress" directorySegmentName="seg_0" id="4E90F166-228E-4A5F-6A22-B2F3F5F374BF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tb ftp weight goal progress tb ftp weight goal FK" directorySegmentName="seg_0" id="4E90F166-228E-4A5F-6A22-B2F3F5F374BF">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 22:53:59 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
 <engineerTo>
 <item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
 </engineerTo>
+<sourceTransferable>false</sourceTransferable>
 <sourcePk>89B3698E-1A5B-D228-6E58-EDB66550EC99</sourcePk>
 <identifying>true</identifying>
 <optionalSource>false</optionalSource>

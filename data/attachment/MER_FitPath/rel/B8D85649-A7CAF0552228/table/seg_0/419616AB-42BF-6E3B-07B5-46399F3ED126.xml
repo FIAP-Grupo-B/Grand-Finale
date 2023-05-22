@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="419616AB-42BF-6E3B-07B5-46399F3ED126" name="tb_fpt_user">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>26B3A272-5CD7-8347-CF56-0732DA7A4EEF</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<ordsAlias>tb_ftp_user</ordsAlias>
+<abbreviation>user</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A7B3B3A4-FC81-C18E-DBDE-CF0C431F65A0">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>638A3EB2-5B06-30CC-1084-0D1066E64600</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>16</dataTypePrecision>
+<ownDataTypeParameters>,16,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="1BA80400-EC1C-65F0-31EC-4AEB8B0781AD">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>D61D28F1-4D7A-2198-3A3A-D296FECC46A0</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="E4189FFF-C1BB-579C-C0CC-D1337F271406">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>490106F1-975A-C7CE-150A-57275AC3B308</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80</dataTypeSize>
+<ownDataTypeParameters>80,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="F729E79E-5DD4-5C1F-D2A8-9B76A478C525">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>241693B8-1B7D-8E46-C215-00AF6DEC9E83</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="4E4C3446-6107-E78A-6B30-DE3C654CE16D">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>BA87B0A8-35C5-0923-D4CF-52C088DC0E95</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16</dataTypeSize>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="url_avatar" id="0A03A946-CD38-4C64-C03B-149F2406A1B5">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:19:40 UTC</createdTime>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>350</dataTypeSize>
+<ownDataTypeParameters>350,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="386A1EE4-BF77-480E-6228-5D48C3F1E258" name="tb_ftp_user_PK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>FECC166E-8DD0-6AE5-059C-659354FF6BDD</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7B3B3A4-FC81-C18E-DBDE-CF0C431F65A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

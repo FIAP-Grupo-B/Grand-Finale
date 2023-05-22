@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="341F3DFD-79FB-55A7-B0EF-CE4DA3779E76" name="tb_fpt_weight_goal_progress">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>F05FF510-E1B6-6E91-6D1E-42A17F952F42</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<ordsAlias>tb_ftp_weight_goal_progress</ordsAlias>
+<abbreviation>weight_goal_progress</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="user_id" id="0643DEA6-B93B-ECC1-FEB9-EC3807558981">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>B4350359-108F-B879-78DD-0EC103C28049</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>16</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B3EA4C7-DCB2-4CAA-6CD2-4D8B7D6E5066" referredColumn="0E461A0F-B673-E299-BCF4-DDE9D073F7E9"/>
+</associations>
+</Column>
+<Column name="goal_id" id="654F60E1-FC51-76BA-4A7F-8DBBBACFEFE8">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>9A5D480B-D41F-50EF-5050-0047FAD0DB1C</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B3EA4C7-DCB2-4CAA-6CD2-4D8B7D6E5066" referredColumn="272E4B62-5156-A332-C76A-C0A63F1F86CA"/>
+</associations>
+</Column>
+<Column name="date" id="BCCF4D47-605E-D35C-D364-19CBB2015B01">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>0B69B33F-961B-2C92-9056-39496D04DFD0</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="value" id="A6D9DA22-6F46-C2F6-4D0E-701A779828C7">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>333C1AEB-B459-780E-CF21-1516A11449F9</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B0552D1-BB8D-651E-76AE-838B5944F19D" name="tb_ftp_weight_goal_progress_PK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>BB6C6E5E-7FBE-1F33-DC63-8FF3D9696C6C</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BCCF4D47-605E-D35C-D364-19CBB2015B01"/>
+<colUsage columnID="0643DEA6-B93B-ECC1-FEB9-EC3807558981"/>
+<colUsage columnID="654F60E1-FC51-76BA-4A7F-8DBBBACFEFE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C58DB78F-13FF-1383-BA09-6EFF36230551" name="tb_ftp_weight_goal_progress_tb_ftp_weight_goal_FK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>4E90F166-228E-4A5F-6A22-B2F3F5F374BF</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="654F60E1-FC51-76BA-4A7F-8DBBBACFEFE8"/>
+<colUsage columnID="0643DEA6-B93B-ECC1-FEB9-EC3807558981"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

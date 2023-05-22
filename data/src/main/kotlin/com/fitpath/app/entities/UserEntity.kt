@@ -8,26 +8,23 @@ import java.util.UUID
 data class UserEntity(
                         @Id
                         @GeneratedValue(generator = "UUID")
-                        @Column(name = "cod_id")
+                        @Column(name = "id")
                         var id: UUID? = UUID.randomUUID(),
 
-                        @Column(name = "des_email", nullable = false)
+                        @Column(name = "email", nullable = false)
                         var email: String,
 
-                        @Column(name = "des_password")
+                        @Column(name = "password")
                         var password: String,
 
-                        @Column(name = "des_first_name", nullable = false)
-                        var firstName: String,
+                        @Column(name = "name", nullable = false)
+                        var name: String,
 
-                        @Column(name = "des_last_name", nullable = false)
+                        @Column(name = "last_name", nullable = false)
                         var lastName: String,
 
-                        @Column(name = "des_middle_name")
-                        var middleName: String? = null,
-
-                        @Column(name = "des_url_avatar")
-                        var avatarUrl: String? = null,
+                        @Column(name = "url_avatar")
+                        var avatarUrl: String? = null
                         ) {
-    constructor(id: UUID, email: String, firstName: String, lastName: String, middleName: String, avatarUrl: String) : this(id, email, firstName, middleName, lastName, middleName, avatarUrl)
+    //constructor(id: UUID, email: String, firstName: String, lastName: String, avatarUrl: String) : this(id, email, "", firstName, lastName, avatarUrl)
 }

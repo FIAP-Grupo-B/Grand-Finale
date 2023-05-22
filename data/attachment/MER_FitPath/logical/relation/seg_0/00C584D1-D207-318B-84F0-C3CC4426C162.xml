@@ -1,12 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="user_had_hydration_goal" directorySegmentName="seg_0" id="00C584D1-D207-318B-84F0-C3CC4426C162">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tb ftp hydration goal tb ftp user FK" directorySegmentName="seg_0" id="00C584D1-D207-318B-84F0-C3CC4426C162">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 23:01:37 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
 <engineerTo>
 <item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
 </engineerTo>
-<targetTransferable>false</targetTransferable>
+<sourceTransferable>false</sourceTransferable>
 <sourcePk>FECC166E-8DD0-6AE5-059C-659354FF6BDD</sourcePk>
 <identifying>true</identifying>
 <optionalSource>false</optionalSource>

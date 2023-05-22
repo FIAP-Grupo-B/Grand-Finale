@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F05FF510-E1B6-6E91-6D1E-42A17F952F42" name="tb_ftp_weight_goal_progress">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F05FF510-E1B6-6E91-6D1E-42A17F952F42" name="tb fpt weight goal progress">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 22:48:42 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
@@ -16,7 +16,7 @@
 <normalForm>Third</normalForm>
 <shortName>weight_goal_progress</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="user_id" id="B4350359-108F-B879-78DD-0EC103C28049">
+<Attribute name="user id" id="B4350359-108F-B879-78DD-0EC103C28049">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 22:53:59 UTC</createdTime>
 <generatorID>4E90F166-228E-4A5F-6A22-B2F3F5F374BF</generatorID>
@@ -31,7 +31,7 @@
 <dataTypePrecision>16</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="goal_id" id="9A5D480B-D41F-50EF-5050-0047FAD0DB1C">
+<Attribute name="goal id" id="9A5D480B-D41F-50EF-5050-0047FAD0DB1C">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 22:53:59 UTC</createdTime>
 <generatorID>4E90F166-228E-4A5F-6A22-B2F3F5F374BF</generatorID>
@@ -74,12 +74,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="BB6C6E5E-7FBE-1F33-DC63-8FF3D9696C6C" name="tb_ftp_weight_goal_progress PK">
+<identifier id="BB6C6E5E-7FBE-1F33-DC63-8FF3D9696C6C" name="tb_ftp_weight_goal_progress_PK">
 <createdBy>salex</createdBy>
 <createdTime>2023-05-15 22:52:55 UTC</createdTime>
 <ownerDesignName>MER_FitPath</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="true"/>
+<item key="B8D85649-A6FB-DA2A-0C8C-A7CAF0552228" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

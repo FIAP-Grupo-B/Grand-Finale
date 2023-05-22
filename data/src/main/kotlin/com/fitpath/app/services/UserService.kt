@@ -11,9 +11,8 @@ class UserService(private val userRepository: UserRepository) {
         val user = UserEntity(
                                 email = userDTO.email,
                                 password = userDTO.password,
-                                firstName = userDTO.firstName,
+                                name = userDTO.name,
                                 lastName = userDTO.lastName,
-                                middleName= userDTO.middleName,
                                 avatarUrl = userDTO.avatarUrl
                                 )
         return userRepository.save(user)
@@ -21,21 +20,12 @@ class UserService(private val userRepository: UserRepository) {
 
     fun getAllUsers(): List<UserDTO> {
         val listUsers = userRepository.findAll()
-        return listUsers.map { user -> UserDTO(user.id!!, user.email,user.firstName, user.lastName, user.middleName, user.avatarUrl) }
+        return listUsers.map { user -> UserDTO(user.id!!, user.email,user.name, user.lastName, user.avatarUrl) }
     }
 
-/*
-    private fun UserEntity.toDto() = UserDTO(
-        id = id,
-        firstName = firstName,
-        lastName = lastName,
-        email = email,
-        avatarUrl = avatarUrl
-    )
- */
     fun getUserByEmail(email: String): UserDTO? {
         val user = userRepository.findUserByEmail(email) ?: return null
-        return UserDTO(user.id,user.email, user.password, user.firstName, user.lastName, user.middleName, user.avatarUrl)
+        return UserDTO(user.id,user.email, user.password, user.name, user.lastName, user.avatarUrl)
     }
 
 }

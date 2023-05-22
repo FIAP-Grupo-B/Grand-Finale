@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5DAFBC7D-FB6B-BAA2-A9C6-879109BBDA8F" name="tb_fpt_weight_goal">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>D1307239-591B-EED9-2CA6-FDC045A80AA9</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<ordsAlias>tb_ftp_weight_goal</ordsAlias>
+<abbreviation>weight_goal</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="272E4B62-5156-A332-C76A-C0A63F1F86CA">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>E77F8C9B-D13E-87CA-7AA0-7F1336DD48A7</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id" id="0E461A0F-B673-E299-BCF4-DDE9D073F7E9">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>8ED43A6D-ABFA-F125-E4D6-0FA53CB11B1C</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>16</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C38FEDBD-5674-8F5C-7B78-D4164FEBF126" referredColumn="A7B3B3A4-FC81-C18E-DBDE-CF0C431F65A0"/>
+</associations>
+</Column>
+<Column name="goal_valuel" id="9CD2F76C-ABDE-EA03-2288-0F2F13FF3BA0">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>74C1C69A-D488-D415-D74D-15267F60C8D8</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="achievement_date" id="E8A21F23-7135-625B-3970-A6F5ED2C1959">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>216C27AF-1D5F-FA0C-D0BA-DE7311660D4D</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C9624C2-823C-8A85-9820-EDDD901A59B4" name="tb_ftp_weight_goal_PK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>89B3698E-1A5B-D228-6E58-EDB66550EC99</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="272E4B62-5156-A332-C76A-C0A63F1F86CA"/>
+<colUsage columnID="0E461A0F-B673-E299-BCF4-DDE9D073F7E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38915DEC-945C-2A92-11F9-97FE04A4CCB2" name="tb_ftp_weight_goal_tb_ftp_user_FK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>4AD552E7-45B5-9DA2-61D3-0F3FBEE6CE4C</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E461A0F-B673-E299-BCF4-DDE9D073F7E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

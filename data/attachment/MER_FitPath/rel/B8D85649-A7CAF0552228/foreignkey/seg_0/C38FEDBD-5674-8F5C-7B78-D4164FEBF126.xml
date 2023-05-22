@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C38FEDBD-5674-8F5C-7B78-D4164FEBF126" containerWithKeyObject="5DAFBC7D-FB6B-BAA2-A9C6-879109BBDA8F" localFKIndex="38915DEC-945C-2A92-11F9-97FE04A4CCB2" name="tb_ftp_weight_goal_tb_ftp_user_FK">
+<createdBy>salex</createdBy>
+<createdTime>2023-05-15 23:10:09 UTC</createdTime>
+<generatorID>4AD552E7-45B5-9DA2-61D3-0F3FBEE6CE4C</generatorID>
+<ownerDesignName>MER_FitPath</ownerDesignName>
+<referredTableLongName>tb_ftp_user</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>419616AB-42BF-6E3B-07B5-46399F3ED126</referredTableID>
+<keyObject>386A1EE4-BF77-480E-6228-5D48C3F1E258</keyObject>
+<referredKeyID>386A1EE4-BF77-480E-6228-5D48C3F1E258</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

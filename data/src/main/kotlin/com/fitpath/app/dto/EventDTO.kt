@@ -6,7 +6,6 @@ class EventDTO (
                 var type: String,
                 var name: String,
                 var locale: String,
-                var description: String
-                ) {
+                var description: String) {
 
 }
