@@ -11,4 +11,12 @@ object UUIDConverter {
         buffer.putLong(uuid.leastSignificantBits)
         return buffer.array()
     }
+
+    fun byteArrayToUUID(byteArray: ByteArray): UUID {
+        val buffer = ByteBuffer.wrap(byteArray)
+        val mostSigBits = buffer.long
+        val leastSigBits = buffer.long
+        return UUID(mostSigBits, leastSigBits)
+    }
+
 }

@@ -1,8 +1,8 @@
-package com.fitpath.app.controllers
+package com.fitpath.app.controllers.goal.progress
 
-import com.fitpath.app.dto.ProgressWeightGoalDTO
+import com.fitpath.app.dto.goal.progress.ProgressWeightGoalDTO
 import com.fitpath.app.entities.goal.progress.ProgressWeightGoalEntity
-import com.fitpath.app.services.ProgressWeightGoalService
+import com.fitpath.app.services.goal.progress.ProgressWeightGoalService
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping

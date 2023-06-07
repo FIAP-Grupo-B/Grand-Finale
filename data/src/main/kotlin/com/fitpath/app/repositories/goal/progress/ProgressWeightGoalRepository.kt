@@ -1,4 +1,4 @@
-package com.fitpath.app.repositories
+package com.fitpath.app.repositories.goal.progress
 
 import com.fitpath.app.entities.goal.progress.ProgressWeightGoalEntity
 import org.springframework.data.jpa.repository.JpaRepository

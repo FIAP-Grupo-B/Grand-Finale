@@ -1,4 +1,4 @@
-package com.fitpath.app.dto
+package com.fitpath.app.dto.goal.progress
 
 import java.util.*
 

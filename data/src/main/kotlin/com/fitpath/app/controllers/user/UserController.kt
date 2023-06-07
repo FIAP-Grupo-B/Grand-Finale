@@ -1,8 +1,8 @@
-package com.fitpath.app.controllers
+package com.fitpath.app.controllers.user
 
-import com.fitpath.app.dto.UserDTO
-import com.fitpath.app.entities.UserEntity
-import com.fitpath.app.services.UserService
+import com.fitpath.app.dto.user.UserDTO
+import com.fitpath.app.entities.user.UserEntity
+import com.fitpath.app.services.user.UserService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 

@@ -1,8 +1,8 @@
-package com.fitpath.app.services
+package com.fitpath.app.services.goal.progress
 
-import com.fitpath.app.dto.ProgressWeightGoalDTO
+import com.fitpath.app.dto.goal.progress.ProgressWeightGoalDTO
 import com.fitpath.app.entities.goal.progress.ProgressWeightGoalEntity
-import com.fitpath.app.repositories.ProgressWeightGoalRepository
+import com.fitpath.app.repositories.goal.progress.ProgressWeightGoalRepository
 import org.springframework.stereotype.Service
 
 @Service

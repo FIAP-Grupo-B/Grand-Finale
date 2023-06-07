@@ -1,20 +1,19 @@
-package com.fitpath.app.services
+package com.fitpath.app.services.user
 
-import com.fitpath.app.dto.UserDTO
-import com.fitpath.app.entities.UserEntity
-import com.fitpath.app.repositories.UserRepository
+import com.fitpath.app.dto.user.UserDTO
+import com.fitpath.app.entities.user.UserEntity
+import com.fitpath.app.repositories.user.UserRepository
 import org.springframework.stereotype.Service
 
 @Service
 class UserService(private val userRepository: UserRepository) {
     fun createUser(userDTO: UserDTO): UserEntity {
         val user = UserEntity(
-                                email = userDTO.email,
-                                password = userDTO.password,
-                                name = userDTO.name,
-                                lastName = userDTO.lastName,
-                                avatarUrl = userDTO.avatarUrl
-                                )
+            email = userDTO.email,
+            password = userDTO.password,
+            name = userDTO.name,
+            lastName = userDTO.lastName,
+            avatarUrl = userDTO.avatarUrl)
         return userRepository.save(user)
     }
 

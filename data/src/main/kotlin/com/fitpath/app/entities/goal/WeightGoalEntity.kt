@@ -6,19 +6,21 @@ import java.util.*
 @Entity
 @Table(name = "tb_fpt_weight_goal")
 data class WeightGoalEntity(
-                            @Column(name = "user_id")
-                            var idUser: ByteArray? = null,
 
-                            @Id
-                            @GeneratedValue(strategy = GenerationType.IDENTITY)
-                            @Column(name = "id")
-                            var idGoal: Long? = null,
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    var idGoal: Long? = null,
 
-                            @Column(name = "goal_value", nullable = false)
-                            var goalValue: Double,
+    @Column(name = "user_id")
+    var idUser: ByteArray? = null,
 
-                            @Column(name = "achievement_date", nullable = false)
-                            var dateAchievement: Date) {
+    @Column(name = "goal_value", nullable = false)
+    var goalValue: Double,
+
+    @Column(name = "achievement_date", nullable = false)
+    var dateAchievement: Date) {
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false

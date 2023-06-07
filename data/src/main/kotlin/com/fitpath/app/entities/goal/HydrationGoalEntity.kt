@@ -7,13 +7,13 @@ import java.time.LocalDateTime
 @Table(name = "tb_fpt_hydration_goal")
 data class HydrationGoalEntity(
 
-    @Column(name = "user_id")
-    var idUser: ByteArray? = null,
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     var idGoal: Long? = null,
+
+    @Column(name = "user_id")
+    var idUser: ByteArray? = null,
 
     @Column(name = "goal_value", nullable = false)
     var goalValue: Double,
@@ -23,8 +23,6 @@ data class HydrationGoalEntity(
 
     @Column(name = "goal_status")
     var status: Boolean? = true) {
-
-
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

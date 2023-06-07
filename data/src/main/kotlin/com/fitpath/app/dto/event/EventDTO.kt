@@ -1,8 +1,10 @@
-package com.fitpath.app.dto
+package com.fitpath.app.dto.event
+
+import java.util.UUID
 
 class EventDTO (
                 var id: Int? = null,
-                var creatorId: Int,
+                var creatorId: ByteArray? = null,
                 var type: String,
                 var name: String,
                 var locale: String,
