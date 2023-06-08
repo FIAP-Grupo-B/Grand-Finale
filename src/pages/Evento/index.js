@@ -18,7 +18,6 @@ export default function Evento() {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex: 1}}>
-      
       <FlatList
             data={eventList}
             ListHeaderComponent={() => (

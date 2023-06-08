@@ -7,8 +7,8 @@ import Chat from 'pages/Chat';
 import Feed from 'pages/Feed';
 import Icons from 'components/Icons';
 import { View, Text, useState, Image } from 'react-native';
-import StackTabs from './stackTabs';
 import logo from 'assets/logo.png'
+import EventosStack from '../Eventos/stackTabs';
 const Tab = createMaterialTopTabNavigator();
 
 export default function TopTabs() {
@@ -37,7 +37,7 @@ export default function TopTabs() {
                tabBarIcon: () => <Image source={logo} style={{width: 35, height: 35}}/>,
               }}
              name="Feed" component={Feed} />
-              <Tab.Screen name="Eventos" component={StackTabs} />
+              <Tab.Screen name="Eventos" component={EventosStack} />
             <Tab.Screen name="Notificação" component={Notification} />
             <Tab.Screen name="Bate-Papo" component={Chat} />
         </Tab.Navigator>

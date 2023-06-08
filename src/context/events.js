@@ -1,5 +1,4 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
-import axios from "axios";
+import React, { createContext, useState, useEffect } from "react";
 import * as event from 'mocks/events'
 
 const EventContext = createContext()
