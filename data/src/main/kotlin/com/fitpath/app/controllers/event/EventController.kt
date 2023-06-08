@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.*
 import java.util.UUID
 
 @RestController
-@RequestMapping("/{userId}")
+@RequestMapping("/event")
 class EventController(private val eventService: EventService) {
-    @PostMapping("/event/create")
+    @PostMapping("/create/{userId}")
     fun createEvent(@PathVariable userId: UUID, @RequestBody eventDTO: EventDTO): EventEntity {
         return eventService.createEvent(eventDTO, userId)
     }
 
-    @GetMapping("/event/allevents")
+    @GetMapping("/allevents")
     fun getAllEvent(): List<EventDTO>{
         return eventService.getAllEvents()
     }
 
-    @GetMapping("/event/myevents")
+    @GetMapping("/myevents/{userId}")
     fun getEventByCreatorId(@PathVariable userId: UUID): List<EventDTO> {
         return eventService.getEventByCreatorId(userId)
     }
