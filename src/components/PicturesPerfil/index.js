@@ -1,5 +1,4 @@
 import Icons from 'components/Icons'
-import useUsers from 'hooks/useUsers'
 import React from 'react'
 import { Text, View, Image, StyleSheet, FlatList, Dimensions } from 'react-native'
 import exemplo from 'assets/exemplo.jpg'

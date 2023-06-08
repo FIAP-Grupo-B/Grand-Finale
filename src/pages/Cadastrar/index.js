@@ -25,25 +25,18 @@ const form = [
       placeholder: 'Primeiro nome',
     },
     {
-      name: 'middleName',
-      type: Input,
-      text: 'Digita o nome do meio:',
-      placeholder: 'Nome do meio',
-    },
-    {
       name: 'lastName',
       type: Input,
-      text: 'Digita o último nome:',
-      placeholder: 'Último nome',
+      text: 'Digita o sobrenome:',
+      placeholder: 'Sobrenome',
     },
   ]
 
   const { width } = Dimensions.get('window')
 export default function Cadastrar() {
   const [formValue, setFormValue] = useState({
-    firsName: "",
+    name: "",
     lastName: "",
-    middleName: "",
     email: "",
     password: "",
     avatarUrl: "http://localhost:8081/assets/exemplo.jpg",
