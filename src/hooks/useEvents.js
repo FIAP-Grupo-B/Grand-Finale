@@ -8,7 +8,7 @@ export default function useEvents() {
   
   
   function createEvent(newEvent, id){
-    axios.post(`http://localhost:8080/user/${id}/event/create`, newEvent)
+    axios.post(`http://localhost:8080/user/${id}/createEvent`, newEvent)
   }
   function myEvent(id){
     axios.post(`http://10.0.2.2:8080/user/${id}/eventList`)

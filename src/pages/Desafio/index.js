@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } fr
 import React from 'react'
 import BackgroundEvent from 'components/Profile'
 import { useNavigation } from '@react-navigation/native'
+import Challenge from 'components/Challenge'
 
 export default function Desafio() {
 
@@ -15,6 +16,10 @@ export default function Desafio() {
             <Text style={style.createEvents}>Criar desafio +</Text>
           </TouchableOpacity>
         </View>
+          <Challenge />
+          <Challenge />
+          <Challenge />
+          <Challenge />
       </ScrollView>
     </SafeAreaView>
   )

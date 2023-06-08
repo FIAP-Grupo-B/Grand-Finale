@@ -4,7 +4,7 @@ import Home from 'pages/Home';
 import Perfil from 'pages/Perfil';
 import Conquistas from 'pages/Conquistas';
 import Explorar from 'pages/Explorar';
-import Nutricao from 'pages/Nutricao';
+import Atividade from 'pages/Atividade';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const Tab = createMaterialBottomTabNavigator();
@@ -37,9 +37,9 @@ export default function BottomTabs() {
                   options={{tabBarIcon: () => (<Icons font="FontAwesome5" name="search" color='#FFFF' size={26}/>),}}
                   />
                   <Tab.Screen
-                  name="Nutricao"
-                  component={Nutricao}
-                  options={{tabBarIcon: () => (<Icons font="Ionicons" name="nutrition" color='#FFFF' size={26}/>)}}/>
+                  name="Atividade"
+                  component={Atividade}
+                  options={{tabBarIcon: () => (<Icons font="FontAwesome5" name="running" color='#FFFF' size={26}/>)}}/>
                   <Tab.Screen
                   name="Conquistas"
                   component={Conquistas}
