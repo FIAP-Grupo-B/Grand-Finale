@@ -2,7 +2,6 @@ package com.fitpath.app.entities.user
 
 import jakarta.persistence.*
 import java.time.LocalDateTime
-import java.util.Date
 
 @Entity
 @Table(name = "tb_fpt_connection")
@@ -19,7 +18,7 @@ data class ConnectionEntity(
     var status: Boolean? = null,
 
     @Column(name = "date_connection")
-    var dateConnection: Date? = null,
+    var dateConnection: LocalDateTime? = null,
 ){
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

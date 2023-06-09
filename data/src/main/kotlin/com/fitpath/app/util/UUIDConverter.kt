@@ -18,5 +18,4 @@ object UUIDConverter {
         val leastSigBits = buffer.long
         return UUID(mostSigBits, leastSigBits)
     }
-
 }
