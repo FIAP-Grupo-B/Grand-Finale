@@ -19,7 +19,7 @@ const form = [
       placeholder: 'Senha',
     },
     {
-      name: 'firstName',
+      name: 'name',
       type: Input,
       text: 'Digita o primeiro nome:',
       placeholder: 'Primeiro nome',

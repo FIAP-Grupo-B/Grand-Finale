@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import Icons from 'components/Icons'
-import useUsers from 'hooks/useUsers'
-import exemplo from 'assets/exemplo.jpg'
+import AuthContext from 'context/auth'
 
 const { width, height} = Dimensions.get('window')
 
 export default function About() {
-  const {users} = useUsers()
+
+  const {user} = useContext(AuthContext)
   return (
     <View style={style.about}>
     <View style={style.aboutSection}>
@@ -15,12 +15,12 @@ export default function About() {
     </View>
     <View>
         <View style={style.location}>
-        <View style={{ flexDirection: 'row', alignItems: 'center'}} >
+        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
             <View style={style.iconHome}>
                 <Icons font='Entypo' name='home' size={50} color={'#FFFF'} />
             </View>
             <View style={style.inputLocation}>
-            <Text style={style.textLocation}>Mora em <Text style={style.bold}>São Paulo</Text></Text>
+            <Text style={style.textLocation}>{user.locale}</Text>
             </View>
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'flex-start', paddingTop: 20}}>
@@ -28,7 +28,7 @@ export default function About() {
                 <Icons font='FontAwesome5' name='comment-dots' size={50} color={'#FFFF'} />
             </View>
             <View style={style.inputComment}>
-            <Text style={style.textComment}>Olá esse é meu perfil</Text>
+            <Text style={style.textComment}>{user.description}</Text>
             </View>
         </View>
         </View>
@@ -74,7 +74,7 @@ const style = StyleSheet.create({
     textLocation: {
       paddingLeft: "5%",
       fontSize: 18,
-      color: '#000'
+      color: '#000',
     },
     inputComment: {
       width: "70%",

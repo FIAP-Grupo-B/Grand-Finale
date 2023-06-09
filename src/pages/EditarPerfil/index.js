@@ -1,7 +1,6 @@
 import { View, Text } from 'react-native'
 import React, { useState, useRef, useContext } from 'react'
 import { StyleSheet,  Dimensions, TouchableOpacity} from 'react-native'
-import Select from 'components/Form/Select'
 import Input from 'components/Form/Input'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
 import { useNavigation } from '@react-navigation/native'
@@ -11,17 +10,28 @@ import AuthContext from 'context/auth'
 const {width, height} = Dimensions.get('window')
 const form = [
   {
-    name: 'type',
-    type: Select,
-    text: 'Selecione o tipo:',
-    options: ['Corrida', 'Esporte', 'Academia', 'Yoga', 'Bicicleta', 'Natação'],
-    placeholder: 'Tipo',
+    name: 'email',
+    type: Input,
+    text: 'Digite o email:',
+    placeholder: 'Email',
+  },
+  {
+    name: 'password',
+    type: Input,
+    text: 'Digite sua senha:',
+    placeholder: 'Senha',
   },
   {
     name: 'name',
     type: Input,
-    text: 'Digite a nome:',
-    placeholder: 'Nome'
+    text: 'Digita nome:',
+    placeholder: 'Primeiro nome',
+  },
+  {
+    name: 'lastName',
+    type: Input,
+    text: 'Digita o sobrenome:',
+    placeholder: 'Sobrenome',
   },
   {
     name: 'locale',
@@ -36,15 +46,18 @@ const form = [
     placeholder: 'Descrição'
   },
 ]
-export default function CriarEvento() {
+export default function EditarPerfil() {
   const navigation = useNavigation() 
-  const { createUserEvents } = useContext(EventContext)
+  const { Set } = useContext(AuthContext)
   const { user } = useContext(AuthContext)
   const [formValue, setFormValue] = useState({
-    type: '',
-    name: '',
-    locale: '',
-    description: '',
+    email: user.email,
+    password: user.password,
+    name: user.name,
+    lastName: user.lastName,
+    avatarUrl: user.avatarUrl,
+    locale: user.locale,
+    description: user.description,
   })
   const swiperList = useRef(null)
 
@@ -74,8 +87,8 @@ export default function CriarEvento() {
           />
           <TouchableOpacity onPress={() => {
             if(last){
-              createUserEvents(formValue, user.id)
-              navigation.navigate('Evento')
+              Set(formValue, user.id)
+              navigation.navigate('Perfil')
             }else{
               handleSlide(index)
             }

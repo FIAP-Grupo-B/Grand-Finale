@@ -1,10 +1,10 @@
 import Icons from 'components/Icons'
 import React from 'react'
-import { Text, View, Image, StyleSheet, FlatList, Dimensions } from 'react-native'
+import { Text, View, Image, StyleSheet, FlatList, Dimensions, TouchableOpacity } from 'react-native'
 import exemplo from 'assets/exemplo.jpg'
 import { BackgroundProfile } from 'components/Profile'
 import About from 'components/About'
-import AuthContext from 'context/auth'
+import { useNavigation } from '@react-navigation/native'
 
 const { width, height } = Dimensions.get('window')
 
@@ -38,8 +38,10 @@ const feed = [
   },
 ]
 
-export default function PicturesPefil() {
+export default function PicturesPefil({ children }) {
   
+  const navigation = useNavigation();
+
   return (
     <View style={style.picture}>
         <View style={style.picturesContent}>
@@ -47,6 +49,14 @@ export default function PicturesPefil() {
           ListHeaderComponent={() => (
             <View style={style.perfilView}>
               <BackgroundProfile />
+              <View style={{ position: 'absolute', top: 15, right: 15, flexDirection: 'row'}}>
+              <TouchableOpacity>
+                <Icons font="Ionicons" name="settings" color='#FFFF' size={35}/>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('EditarPerfil')}>
+                <Icons font="Entypo" name="edit" color='#FFFF' size={35}/>
+              </TouchableOpacity>
+            </View>
             <View style={style.description}>
               <About />
               <View style={style.picturesSection}>
@@ -71,7 +81,7 @@ export default function PicturesPefil() {
               </View>
             </View>
             <View style={style.contentDescriptionFeed}>
-              {/* <Text style={style.descriptionFeed}>{users.firstName} <Text>Lorem ipsum dolor sit amet</Text></Text> */}
+              <Text>Lorem Ipsum Dolor</Text>
             </View>
           </View>
           }/>

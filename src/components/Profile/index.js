@@ -17,8 +17,8 @@ export default function BackgroundEvent() {
             <View style={style.sectionPicture}>
                 <Image source={exemplo} style={style.pictureProfile} />
                 <View>
-                  <Text style={style.nameEvent}>{user.firstName}</Text>
-                  <Text style={style.sportEvent}>Karate | Musculação</Text>
+                  <Text style={style.nameEvent}>{user.name}</Text>
+                  <Text style={style.sportEvent}>{user.lastName}</Text>
                 </View>
                 <View style={style.contentIconsEvent}>
                     <View style={style.boxIcon1Event}>
@@ -50,8 +50,8 @@ export function BackgroundProfile() {
         <View>
           <Image source={exemplo} style={style.picturePerfil} />
           <View>
-            <Text style={style.name}>{user.firstName}</Text>
-            <Text style={style.sport}>Musculação | Karate</Text>
+            <Text style={style.name}>{user.name}</Text>
+            <Text style={style.sport}>{user.lastName}</Text>
           </View>
         </View>
         <View style={style.contentIcons}>

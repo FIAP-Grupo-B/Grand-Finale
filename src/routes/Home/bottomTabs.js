@@ -13,6 +13,7 @@ const Tab = createMaterialBottomTabNavigator();
 import { Provider as PaperProvider } from 'react-native-paper';
 import Icons from 'components/Icons';
 import DesafiosStack from '../Desafio/stackTabs';
+import PerfilStack from 'routes/Perfil/stackTabs';
 
 const theme = { colors: {  primary: '#3498db',accent: '#f1c40f',},};
 
@@ -46,8 +47,8 @@ export default function BottomTabs() {
                   options={{tabBarIcon: () => (<Icons font="Ionicons" name="trophy" color='#FFFF' size={26}/>)}}
                   />
                   <Tab.Screen
-                  name="Perfil"
-                  component={Perfil}
+                  name="PerfilStack"
+                  component={PerfilStack}
                   options={{tabBarIcon: () => (<FontAwesome name="user" color='#FFFF' size={26}/>),}} />
               </Tab.Navigator>
         </PaperProvider>

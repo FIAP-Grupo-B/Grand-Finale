@@ -22,11 +22,17 @@ export const AuthProvider = ({children}) => {
         setUser(response.data)
     }
     
+    async function Set(dataValue, creatorId){
+        const response = await auth.setUser(dataValue, creatorId)
+        console.log(response.data)
+        setUser(response.data)
+    }
+
     return (
         <AuthContext.Provider value={{signed: 
         // true,
         !!user, 
-        user, Login}}>
+        user, Login, Set}}>
             {children}
         </AuthContext.Provider>
     )
