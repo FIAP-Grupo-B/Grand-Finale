@@ -16,9 +16,8 @@ export const AuthProvider = ({children}) => {
     //     password: "1234"
     // }
 
-    async function Login(email){
-        const response = await auth.signInUser(email)
-        console.log(response.data)
+    async function Login(dataValue){
+        const response = await auth.signInUser(dataValue)
         setUser(response.data)
     }
     
