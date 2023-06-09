@@ -12,7 +12,7 @@ import java.util.UUID
 class HydrationGoalService (private val hydrationGoalRepository: HydrationGoalRepository) {
     fun createWeightGoal(user: UUID, hydrationGoalDTO: HydrationGoalDTO): HydrationGoalEntity {
         val goal = HydrationGoalEntity(
-            idUser = UUIDConverter.uuidToBinary(user),
+            idUser = UUIDConverter.uuidToByteArray(user),
             goalValue = hydrationGoalDTO.goalValue
         )
         return hydrationGoalRepository.save(goal)

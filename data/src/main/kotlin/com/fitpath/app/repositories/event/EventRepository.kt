@@ -8,5 +8,5 @@ import java.util.UUID
 
 @Repository
 interface EventRepository: JpaRepository<EventEntity, Int> {
-    fun findByCreatorId(userId: ByteArray): List<EventDTO>
+    fun findByCreatorId(userId: ByteArray?): List<EventDTO>
 }
