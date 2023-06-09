@@ -10,7 +10,7 @@ import java.util.UUID
 @RequestMapping("/event")
 class EventController(private val eventService: EventService) {
     @PostMapping("/create/{userId}")
-    fun createEvent(@PathVariable userId: UUID, @RequestBody eventDTO: EventDTO): EventEntity {
+    fun createEvent(@PathVariable userId: UUID, @RequestBody eventDTO: EventDTO): EventDTO {
         return eventService.createEvent(eventDTO, userId)
     }
 

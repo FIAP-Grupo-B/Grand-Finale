@@ -11,7 +11,7 @@ import java.util.UUID
 class WeightGoalService (private val weightGoalRepository: WeightGoalRepository) {
     fun createWeightGoal(user: UUID, weightGoalDTO: WeightGoalDTO): WeightGoalEntity {
         val goal = WeightGoalEntity(
-            idUser = UUIDConverter.uuidToBinary(user),
+            idUser = UUIDConverter.uuidToByteArray(user),
             goalValue = weightGoalDTO.goalValue,
             dateAchievement = weightGoalDTO.achievementDate
         )

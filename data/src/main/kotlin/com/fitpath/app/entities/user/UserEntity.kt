@@ -3,16 +3,14 @@ package com.fitpath.app.entities.user
 import com.fitpath.app.dto.user.UserDTO
 import com.fitpath.app.util.UUIDConverter
 import jakarta.persistence.*
-import org.springframework.stereotype.Repository
 import java.util.UUID
 
 @Entity
 @Table(name = "tb_fpt_user")
 data class UserEntity(
     @Id
-    @GeneratedValue(generator = "UUID")
     @Column(name = "id")
-    var id: ByteArray? = UUIDConverter.uuidToBinary(UUID.randomUUID()),
+    var id: ByteArray?,
 
     @Column(name = "email", nullable = false)
     var email: String,
@@ -35,6 +33,9 @@ data class UserEntity(
     @Column(name = "description")
     var description: String? = null)
 {
+    constructor(email: String, password: String, name: String, lastName: String, avatarUrl: String, locale: String, description: String?):
+            this(null, email, password, name, name, avatarUrl, locale, description){
+            }
 
     fun alterInformations(userDTO: UserDTO) {
         this.email = userDTO.email
@@ -63,4 +64,6 @@ data class UserEntity(
     override fun hashCode(): Int {
         return id?.contentHashCode() ?: 0
     }
+
 }
+

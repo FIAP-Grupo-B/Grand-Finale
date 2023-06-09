@@ -4,14 +4,15 @@ import com.fitpath.app.dto.user.UserDTO
 import com.fitpath.app.entities.user.UserEntity
 import com.fitpath.app.repositories.user.UserRepository
 import com.fitpath.app.util.UUIDConverter
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
 import java.util.*
+import java.util.UUID.*
 
 @Service
 class UserService(private val userRepository: UserRepository) {
-    fun createUser(userDTO: UserDTO): UserEntity {
+    fun createUser(userDTO: UserDTO): UUID {
         val user = UserEntity(
+            id = UUIDConverter.uuidToByteArray(randomUUID()),
             email = userDTO.email,
             password = userDTO.password,
             name = userDTO.name,
@@ -19,24 +20,26 @@ class UserService(private val userRepository: UserRepository) {
             avatarUrl = userDTO.avatarUrl,
             locale = userDTO.locale,
             description = userDTO.description)
-        return userRepository.save(user)
+        userRepository.save(user)
+        return UUIDConverter.byteArrayToUUID(user.id)
+
     }
 
     fun getAllUsers(): List<UserDTO> {
         val listUsers = userRepository.findAll()
-        return listUsers.map { user -> UserDTO(user.id!!, user.email,user.name, user.lastName, user.avatarUrl, user.locale, user.description) }
+        return listUsers.map { user -> UserDTO(UUIDConverter.byteArrayToUUID(user.id!!), user.email,user.name, user.lastName, user.avatarUrl, user.locale, user.description) }
     }
 
     fun getUserByEmail(email: String): UserDTO? {
         val user = userRepository.findUserByEmail(email) ?: return null
-        return UserDTO(user.id,user.email, user.password, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
+        return UserDTO(UUIDConverter.byteArrayToUUID(user.id),user.email, user.password, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
     }
 
-    fun alterMyInformations(userId: UUID, userDTO: UserDTO): UserEntity{
-        val uuidByteArray = UUIDConverter.uuidToBinary(userId)
-        val user = userRepository.findById(uuidByteArray)
-
+    fun alterMyInformations(userId: UUID, userDTO: UserDTO): UserDTO {
+        val userIdByteArray = UUIDConverter.uuidToByteArray(userId)
+        val user = userRepository.findById(userIdByteArray)
         user.alterInformations(userDTO)
-        return userRepository.save(user)
+        userRepository.save(user)
+        return UserDTO(UUIDConverter.byteArrayToUUID(user.id),user.email, user.password, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
     }
 }
