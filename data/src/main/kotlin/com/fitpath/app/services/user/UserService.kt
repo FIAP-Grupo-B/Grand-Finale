@@ -30,9 +30,20 @@ class UserService(private val userRepository: UserRepository) {
         return listUsers.map { user -> UserDTO(UUIDConverter.byteArrayToUUID(user.id!!), user.email,user.name, user.lastName, user.avatarUrl, user.locale, user.description) }
     }
 
-    fun getUserByEmail(email: String): UserDTO? {
-        val user = userRepository.findUserByEmail(email) ?: return null
-        return UserDTO(UUIDConverter.byteArrayToUUID(user.id),user.email, user.password, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
+    fun getUserByEmail(userDTO: UserDTO): UserDTO? {
+        val user = userRepository.findUserByEmail(userDTO.email) ?: return null
+        val pass = userDTO.password!!.compareTo(user.password.toString())
+        return if (pass == 0) {
+            UserDTO(UUIDConverter.byteArrayToUUID(user.id),user.email, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
+        } else {
+            null
+        }
+    }
+
+    fun getUserByUserId(userId: UUID): UserDTO? {
+        val userIdByteArray = UUIDConverter.uuidToByteArray(userId)
+        val user = userRepository.findById(userIdByteArray)
+        return UserDTO(UUIDConverter.byteArrayToUUID(user.id),user.email, user.name, user.lastName, user.avatarUrl, user.locale, user.description)
     }
 
     fun alterMyInformations(userId: UUID, userDTO: UserDTO): UserDTO {

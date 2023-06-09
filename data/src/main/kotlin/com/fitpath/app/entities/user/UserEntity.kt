@@ -1,9 +1,7 @@
 package com.fitpath.app.entities.user
 
 import com.fitpath.app.dto.user.UserDTO
-import com.fitpath.app.util.UUIDConverter
 import jakarta.persistence.*
-import java.util.UUID
 
 @Entity
 @Table(name = "tb_fpt_user")
@@ -13,16 +11,16 @@ data class UserEntity(
     var id: ByteArray?,
 
     @Column(name = "email", nullable = false)
-    var email: String,
+    var email: String?,
 
     @Column(name = "password")
-    var password: String,
+    var password: String?,
 
     @Column(name = "name", nullable = false)
-    var name: String,
+    var name: String?,
 
     @Column(name = "last_name", nullable = false)
-    var lastName: String,
+    var lastName: String?,
 
     @Column(name = "url_avatar")
     var avatarUrl: String? = null,
@@ -33,8 +31,8 @@ data class UserEntity(
     @Column(name = "description")
     var description: String? = null)
 {
-    constructor(email: String, password: String, name: String, lastName: String, avatarUrl: String, locale: String, description: String?):
-            this(null, email, password, name, name, avatarUrl, locale, description){
+    constructor(email: String, name: String, lastName: String, avatarUrl: String, locale: String, description: String):
+            this(null, email, null, name, lastName, avatarUrl, locale, description){
             }
 
     fun alterInformations(userDTO: UserDTO) {

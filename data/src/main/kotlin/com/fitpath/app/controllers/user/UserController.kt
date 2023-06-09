@@ -19,16 +19,19 @@ class UserController (private val userService: UserService){
         return userService.getAllUsers()
     }
 
-    @GetMapping("/{email}")
-    fun getUserByEmail(@PathVariable email: String): ResponseEntity<UserDTO> {
-        val userDTO = userService.getUserByEmail(email) ?: return ResponseEntity.notFound().build()
-        return ResponseEntity.ok(userDTO)
+    @GetMapping("/{userId}")
+    fun getUserByID(@PathVariable userId: UUID): UserDTO? {
+        return userService.getUserByUserId(userId)
+    }
+
+    @GetMapping("/login")
+    fun getUserByEmail(@RequestBody userDTO: UserDTO): UserDTO? {
+        return userService.getUserByEmail(userDTO)
     }
 
     @PostMapping("alter/{userId}")
     fun alterMyInformations(@PathVariable userId: UUID, @RequestBody userDTO: UserDTO): UserDTO {
         return userService.alterMyInformations(userId, userDTO)
     }
-
 
 }
