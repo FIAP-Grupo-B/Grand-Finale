@@ -59,7 +59,7 @@ export default function CriarEvento() {
       <SwiperFlatList
       data={form}
       ref={swiperList}
-      showPagination={true}
+      showPagination={false}
       renderItem={({item, index}) => {
         const List = item.type
         const last = index == form.length - 1

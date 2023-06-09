@@ -7,7 +7,7 @@ export const UserEvents = async(creatorId) => {
 }
 
 export const CommunityEvents = async() => {
-    return await axios.get(`http://10.0.2.2:8080/event/allEvents`)
+    return await axios.get(`http://10.0.2.2:8080/event/allevents`)
 }
 
 export const CreateEvent = async(dataValue, creatorId) => {

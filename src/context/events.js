@@ -12,11 +12,13 @@ export const EventProvider = ({children}) => {
     }
     async function getCommunityEvents(){
         const response = await event.CommunityEvents()
+        console.log(response.data)
         setEvents(response.data)
     }
     async function createUserEvents(dataValue, creatorId){
         const response = await event.CreateEvent(dataValue, creatorId)
         setEvents(response.data)
+        console.log(response.data)
         getCommunityEvents()
     }
 
