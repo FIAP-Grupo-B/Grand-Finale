@@ -4,39 +4,40 @@ import { StyleSheet,  Dimensions, TouchableOpacity} from 'react-native'
 import Input from 'components/Form/Input'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
 import { useNavigation } from '@react-navigation/native'
-import EventContext from 'context/events'
 import AuthContext from 'context/auth'
+import GoalContext from 'context/goal';
+import Select from 'components/Form/Select';
 
 const {width, height} = Dimensions.get('window')
 const form = [
   {
-    name: 'name',
-    type: Input,
-    text: 'Digite a nome:',
-    placeholder: 'Nome'
+    name: 'type',
+    type: Select,
+    text: 'Tipo do desafio:',
+    options: ['Peso', 'Hidratação'],
+    placeholder: 'Tipo',
   },
   {
-    name: 'locale',
+    name: 'goalValue',
     type: Input,
-    text: 'Digite a localização:',
-    placeholder: 'Localização'
+    text: 'Digite o valor do desafio:',
+    placeholder: 'Valor do desafio'
   },
   {
-    name: 'description',
+    name: 'achievementDate',
     type: Input,
-    text: 'Digite a descrição:',
-    placeholder: 'Descrição'
+    text: 'Digite a data de finalização:',
+    placeholder: '2023-10-10'
   },
 ]
 export default function CriarDesafio() {
-  const navigation = useNavigation() 
-  const { createUserEvents } = useContext(EventContext)
+  const navigation = useNavigation()
+  const { createWeightGoal, createHydrationGoal } = useContext(GoalContext)
   const { user } = useContext(AuthContext)
   const [formValue, setFormValue] = useState({
     type: '',
-    name: '',
-    locale: '',
-    description: '',
+    goalValue: 0,
+    achievementDate: '',
   })
   const swiperList = useRef(null)
 
@@ -66,8 +67,15 @@ export default function CriarDesafio() {
           />
           <TouchableOpacity onPress={() => {
             if(last){
-            //   createUserEvents(formValue, user.id)
-            //   navigation.navigate('Evento')
+              formValue.type === 'Peso' ? createWeightGoal({
+                goalValue: formValue.goalValue,
+                achievementDate: formValue.achievementDate
+              }, user.id)
+              : createHydrationGoal({
+                goalValue: formValue.goalValue,
+                achievementDate: formValue.achievementDate
+              }, user.id)
+              navigation.navigate('Desafio')
             }else{
               handleSlide(index)
             }
