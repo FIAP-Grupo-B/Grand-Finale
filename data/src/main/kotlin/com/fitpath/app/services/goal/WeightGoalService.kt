@@ -17,4 +17,10 @@ class WeightGoalService (private val weightGoalRepository: WeightGoalRepository)
         )
         return weightGoalRepository.save(goal)
     }
+
+    fun getGoalByCreatorId(userId: UUID): WeightGoalDTO? {
+        val userIdByteArray = UUIDConverter.uuidToByteArray(userId)
+        val goal = weightGoalRepository.findByIdUser(userIdByteArray)
+        return goal?.let { WeightGoalDTO(goal?.idGoal, UUIDConverter.byteArrayToUUID(goal?.idUser), it.goalValue, goal.dateAchievement) }
+    }
 }

@@ -1,10 +1,11 @@
 package com.fitpath.app.dto.goal
 
+import java.time.LocalDateTime
 import java.util.*
 
 class WeightGoalDTO(
-                    var idUser: ByteArray? = null,
-                    var idGoal: Long? = null,
-                    var goalValue: Double,
-                    var achievementDate: Date) {
+    var idUser: Long?,
+    var idGoal: UUID?,
+    var goalValue: Double,
+    var achievementDate: LocalDateTime) {
 }

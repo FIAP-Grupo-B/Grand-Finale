@@ -1,7 +1,6 @@
 package com.fitpath.app.services.user
 
 import com.fitpath.app.dto.user.ConnectionDTO
-import com.fitpath.app.dto.user.UserDTO
 import com.fitpath.app.entities.user.ConnectionEntity
 import com.fitpath.app.repositories.user.ConnectionRepository
 import com.fitpath.app.util.UUIDConverter
@@ -12,17 +11,18 @@ import java.util.*
 class ConnectionService(private val connectionRepository: ConnectionRepository) {
     fun createConnection(connectionDTO: ConnectionDTO): ConnectionEntity {
         val connection = ConnectionEntity(
-            idUser1 = connectionDTO.userId1,
-            idUser2 = connectionDTO.userId2,
-            status = connectionDTO.status,
+            userId1 = UUIDConverter.uuidToByteArray(connectionDTO.userId1),
+            userId2 = UUIDConverter.uuidToByteArray(connectionDTO.userId2),
+            status = false,
             dateConnection = connectionDTO.dateConnection)
         return connectionRepository.save(connection)
     }
 /*
     fun pendingRequests(user: UUID): List<ConnectionDTO>? {
-        val listUsers = connectionRepository.findAll()
-        return listUsers.map { user -> UserDTO(UUIDConverter.byteArrayToUUID(user.id!!), user.email,user.name, user.lastName, user.avatarUrl, user.locale, user.description) }
+        val userIdToBePending = UUIDConverter.uuidToByteArray(user)
+        val listPendingRequests = connectionRepository.findPendingRequests(userIdToBePending)
+        return listPendingRequests?.map { request -> ConnectionDTO(UUIDConverter.byteArrayToUUID(request.userId1), UUIDConverter.byteArrayToUUID(request.userId2), request.status, request.dateConnection) }
     }
+*/
 
- */
 }

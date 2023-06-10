@@ -4,7 +4,6 @@ import com.fitpath.app.dto.event.EventDTO
 import com.fitpath.app.entities.event.EventEntity
 import com.fitpath.app.repositories.event.EventRepository
 import com.fitpath.app.util.UUIDConverter
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.*
 

@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface HydrationGoalRepository: JpaRepository<HydrationGoalEntity, Long> {
+    fun findByIdUser(idUser: ByteArray): HydrationGoalEntity
+
 }

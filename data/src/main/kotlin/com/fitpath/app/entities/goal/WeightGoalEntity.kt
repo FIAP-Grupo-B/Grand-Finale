@@ -1,7 +1,7 @@
 package com.fitpath.app.entities.goal
 
 import jakarta.persistence.*
-import java.util.*
+import java.time.LocalDateTime
 
 @Entity
 @Table(name = "tb_fpt_weight_goal")
@@ -19,7 +19,8 @@ data class WeightGoalEntity(
     var goalValue: Double,
 
     @Column(name = "achievement_date", nullable = false)
-    var dateAchievement: Date) {
+    var dateAchievement: LocalDateTime
+) {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
