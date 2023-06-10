@@ -14,15 +14,15 @@ class ConnectionController(private val connectionService: ConnectionService) {
     @PostMapping("/{user}/connect")
     fun createConnection(@PathVariable user: UUID, @RequestBody user2:UUID): ConnectionEntity {
         val connectionDTO = ConnectionDTO (
-            userId1 = UUIDConverter.uuidToByteArray(user),
-            userId2 = UUIDConverter.uuidToByteArray(user2))
+            userId1 = user,
+            userId2 = user2)
         return connectionService.createConnection(connectionDTO)
     }
-
-    /*
+/*
     @PostMapping("/{user}/pending-requests")
-    fun getPendingRequests(@PathVariable user: UUID): List<ConnectionDTO> {
+    fun getPendingRequests(@PathVariable user: UUID): List<ConnectionDTO>? {
         return connectionService.pendingRequests(user)
     }
-*/
+
+ */
 }

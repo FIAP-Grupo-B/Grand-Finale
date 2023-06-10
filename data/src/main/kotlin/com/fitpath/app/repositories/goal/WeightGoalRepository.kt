@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface WeightGoalRepository: JpaRepository<WeightGoalEntity, Long> {
+     fun findByIdUser(idUser: ByteArray): WeightGoalEntity?
 }

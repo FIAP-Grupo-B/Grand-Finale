@@ -5,10 +5,14 @@ import java.util.*
 
 object UUIDConverter {
 
-    fun uuidToByteArray(uuid: UUID): ByteArray {
+    fun uuidToByteArray(uuid: UUID?): ByteArray {
         val buffer = ByteBuffer.allocate(16)
-        buffer.putLong(uuid.mostSignificantBits)
-        buffer.putLong(uuid.leastSignificantBits)
+        if (uuid != null) {
+            buffer.putLong(uuid.mostSignificantBits)
+        }
+        if (uuid != null) {
+            buffer.putLong(uuid.leastSignificantBits)
+        }
         return buffer.array()
     }
 

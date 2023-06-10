@@ -5,7 +5,6 @@ import com.fitpath.app.entities.goal.HydrationGoalEntity
 import com.fitpath.app.repositories.goal.HydrationGoalRepository
 import com.fitpath.app.util.UUIDConverter
 import org.springframework.stereotype.Service
-import java.time.LocalDateTime
 import java.util.UUID
 
 @Service
@@ -16,5 +15,10 @@ class HydrationGoalService (private val hydrationGoalRepository: HydrationGoalRe
             goalValue = hydrationGoalDTO.goalValue
         )
         return hydrationGoalRepository.save(goal)
+    }
+    fun getGoalByCreatorId(userId: UUID): HydrationGoalDTO {
+            val userIdByteArray = UUIDConverter.uuidToByteArray(userId)
+            val goal = hydrationGoalRepository.findByIdUser(userIdByteArray)
+            return HydrationGoalDTO(goal.idGoal, UUIDConverter.byteArrayToUUID(goal.idUser), goal.goalValue, goal.creationDate, goal.status )
     }
 }
