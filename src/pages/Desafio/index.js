@@ -17,9 +17,6 @@ export default function Desafio() {
           </TouchableOpacity>
         </View>
           <Challenge />
-          <Challenge />
-          <Challenge />
-          <Challenge />
       </ScrollView>
     </SafeAreaView>
   )

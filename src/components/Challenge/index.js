@@ -3,6 +3,8 @@ import React from 'react'
 import diet from 'assets/diet.jpg'
 import config from 'assets/config.png'
 
+import water from 'assets/water.png'
+import weight from 'assets/weight.png'
 
 export default function Challenge() {
   return (

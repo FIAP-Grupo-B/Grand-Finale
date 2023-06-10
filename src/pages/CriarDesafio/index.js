@@ -36,7 +36,7 @@ export default function CriarDesafio() {
   const { user } = useContext(AuthContext)
   const [formValue, setFormValue] = useState({
     type: '',
-    goalValue: 0,
+    goalValue: '',
     achievementDate: '',
   })
   const swiperList = useRef(null)

@@ -11,4 +11,12 @@ export async function hydrationGoal(dataValue, creatorId){
     return await axios.post(`http://10.0.2.2:8080/${creatorId}/create_hydration_goal`, dataValue)
 }
 
+export async function getHydration(creatorId){
+    return await axios.get(`http://localhost:8080/${creatorId}/my_hydration_goal`)
+}
+
+export async function getWeight(creatorId){
+    return await axios.get(`http://localhost:8080/${creatorId}/my_weight_goal`)
+}
+
 export default weightGoal;
