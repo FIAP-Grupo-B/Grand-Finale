@@ -4,8 +4,8 @@ import java.time.LocalDateTime
 import java.util.*
 
 class WeightGoalDTO(
-    var idUser: Long?,
-    var idGoal: UUID?,
+    var idGoal: Long?,
+    var idUser: UUID?,
     var goalValue: Double,
     var achievementDate: LocalDateTime) {
 }
